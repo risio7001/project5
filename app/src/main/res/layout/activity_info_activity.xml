@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Info_activity" >
+
+    <TextView
+        android:id="@+id/info_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btn_myPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="게시물 보기" />
+
+    <Button
+        android:id="@+id/btn_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 재설정" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃" />
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="정보 수정" />
+
+    <Button
+        android:id="@+id/btn_deleteM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원탈퇴" />
+</LinearLayout>

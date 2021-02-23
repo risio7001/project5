@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_activity"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detail_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_img"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@color/black"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_launcher_background"
+                tools:visibility="visible" />
+
+            <VideoView
+                android:id="@+id/detail_video"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@color/black"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="title" />
+
+        <LinearLayout
+            android:id="@+id/layout66"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detail_person"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                tools:text="person" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/coment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout77"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.673"
+        >
+        <Button
+            android:id="@+id/coment_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:text="댓글은 로그인 후 이용 할 수 있습니다." />
+
+        <EditText
+            android:id="@+id/coment_write"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Coment"
+            android:inputType="none"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_comentWrite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:visibility="gone"
+            android:text="작성" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout77"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coment_layout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detail_coment"
+            android:layout_width="412dp"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
